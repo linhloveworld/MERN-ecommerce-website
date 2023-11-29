@@ -1,8 +1,17 @@
 import React from 'react';
 import { Col, Row } from 'antd';
-import { WrapperHeader, WrapperTextHeader, WrapperTextHeaderSmall } from './style'
-import { Search } from 'antd';
-import { UserOutLined } from '@ant-design/icons';
+import { Button, Flex } from 'antd';
+import { WrapperHeader, 
+  WrapperTextHeader, 
+  WrapperTextHeaderSmall, 
+  WrapperHeaderAccount } from './style'
+import { AudioOutlined } from '@ant-design/icons';
+import { Input, Space } from 'antd';
+import { UserOutlined, 
+  CaretDownOutlined, 
+  ShoppingCartOutlined  } from '@ant-design/icons';
+import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
+const {Search} = Input
 const HeaderComponent = () => {
   return (
     <div>
@@ -11,17 +20,18 @@ const HeaderComponent = () => {
           <WrapperTextHeaderSmall>ABC</WrapperTextHeaderSmall>
         </Col>
         <Col span={12}>
-          <Search
+          {/* <Search
             placeholder="input search text"
             enterButton
             size="large"
             onSearch="{onSearch}"
-          />
+          /> */}
+          <ButtonInputSearch size='large' textButton='Tim kiem' placeholder='Nhap tim kiem '/>
         </Col>
         <Col span={6} style={{display:'flex',gap:'20px'}}>
           <WrapperHeaderAccount>
           <div>
-            <UserOutLined style={{fontSize:'12px'}}/>
+            <UserOutlined style={{fontSize:'12px'}}/>
           </div>
           <div>
             <span style={{fontSize:'12px'}}>Dang nhap/ Dang ky</span>

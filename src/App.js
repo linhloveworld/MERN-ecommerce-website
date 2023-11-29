@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter as Router, Route } from 'react-router-dom/cjs/react-router-dom';
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
 import DefaultComponent from './components/DefaultComponent/DefaultComponent';
 import { routes } from './routes';
@@ -18,7 +18,7 @@ function App()
         <div>
           <HeaderComponent/>
           <Router>
-            <Routes>
+            <React.Fragment>
               {routes.map((route) => {
                 const Page = route.page;
                 const Layout = route.isShowHeader ? DefaultComponent : Fragment
@@ -30,7 +30,7 @@ function App()
                 }/>
                 );
                 })}
-            </Routes>
+            </React.Fragment>
           </Router>
             {/* <div>
                 <Button
