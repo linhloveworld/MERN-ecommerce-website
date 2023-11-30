@@ -9,7 +9,7 @@ const SliderComponent = () => {
     slideToScroll: 1
   };
   return (
-    <Slider Setting=></Slider>
+    <Slider Setting></Slider>
   )
 }
 
