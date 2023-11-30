@@ -26,9 +26,13 @@ const HeaderComponent = () => {
             size="large"
             onSearch="{onSearch}"
           /> */}
-          <ButtonInputSearch size='large' textButton='Tim kiem' placeholder='Nhap tim kiem '/>
+          <ButtonInputSearch 
+          size='large' 
+          textButton="Tim kiem" 
+          placeholder="Nhap tim kiem"
+          bordered={false}/>
         </Col>
-        <Col span={6} style={{display:'flex',gap:'20px'}}>
+        <Col span={6} style={{display:'flex',gap:'20px', alignItems:'center'}}>
           <WrapperHeaderAccount>
           <div>
             <UserOutlined style={{fontSize:'12px'}}/>
