@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import {Row} from "antd";
 
+//export const WrapperTypeProduct 
 export const WrapperHeader = styled(Row)`
         padding: 10px 120px;
         background-color: rgb(26, 148, 255); 
-        align-item: center;`
+        align-item: center;
+        flex-wrap: nowrap`
 
 export const WrapperTextHeader = styled.span`
         font-size: 18px;
@@ -18,4 +20,5 @@ export const WrapperHeaderAccount = styled.div`
 
 export const WrapperTextHeaderSmall = styled.span`
         font-size:12px;
-        color:#fff;`
+        color:#fff;
+        white-space: nowrap;`
