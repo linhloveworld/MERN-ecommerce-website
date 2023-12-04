@@ -7,7 +7,8 @@ import {slider3} from '../../assets/images/slider3.webp'
 import { WrapperTypeProduct } from '../../components/HeaderComponent/style'
 import CardComponent from '../../components/CardComponent/CardComponent'
 import NavbarComponent from '../../components/NavbarComponent/NavbarComponent'
-
+import { WrapperButtonMore, WrapperProducts } from './style'
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
 const HomePage = () => {
   const arr = ['ABC', 'abc', 'XYZ']
   return (
@@ -23,19 +24,26 @@ const HomePage = () => {
         })}
         </WrapperTypeProduct>
       </div>
-      <div id="content" style={{backgroundColor:
-        "#efefef", padding: '0 120px'}}>
+      <div id="container" style={{backgroundColor:
+        "#efefef", padding: '0 120px', height:'1000px',width:'100%'}}>
             <SliderComponent  arrImages={[slider1,slider2,slider3]}/>
-            <div style={{marginTop:'20px',display:'flex',alignItems:'center', gap:'20px'}}>
+            <WrapperProducts>
               <CardComponent/>
               <CardComponent/>
               <CardComponent/>
               <CardComponent/>
               <CardComponent/>
               <CardComponent/>
+            </WrapperProducts>
+            <div style={{marginTop:'20px',display:'flex',alignItems:'center', justifyContent: 'space-around', gap:'30px',flexWrap:'wrap'}}>
             </div>
-            <ButtonComponent textButton="Xem them"
-            type="outlined" styleButton={{border: '1px solid rgb(11,116,229)', color: 'rgb(11,116,229)', width: '240px',height:'38px', borderRadius:'4px'}}></ButtonComponent>
+            <div style={{width:'100%',display:'flex', justifyContent:'center', marginTop:'10px'}}>
+              <WrapperButtonMore 
+                  textButton="Xem them"
+                  type="outlined" 
+                  styleButton={{border: '1px solid rgb(11,116,229)', color: 'rgb(11,116,229)', width: '240px',height:'38px', borderRadius:'4px'}} styleTextButton={{fontWeight:500}}
+              />
+            </div>
           <NavbarComponent/>  
       </div>
     </>

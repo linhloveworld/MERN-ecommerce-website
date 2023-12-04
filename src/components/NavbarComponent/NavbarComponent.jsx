@@ -58,7 +58,7 @@ const NavbarComponent = () => {
       <WrapperContent>
       {renderContent('text',['Do choi 1','Do choi 2','Do choi 3'])}
       </WrapperContent>
-      <WrapperContent>
+      {/* <WrapperContent>
         {renderContent('checkbox', [
           {value: 'a', label: 'A'},
           {value: 'a', label: 'B'}
@@ -66,7 +66,7 @@ const NavbarComponent = () => {
       </WrapperContent>
       <WrapperContent>
         {renderContent('star', [3,4,5])}
-      </WrapperContent>
+      </WrapperContent> */}
     </div>
   )
 }
