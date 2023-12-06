@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import {Row} from "antd";
 
-//export const WrapperTypeProduct 
+export const WrapperTypeProduct = styled.div`
+display: flex;
+align-item: center;
+gap: 24px;
+justify-content: flex start;
+border-radius: 10px;
+border-bottom: 1px solid red;
+height: 44px;`
 export const WrapperHeader = styled(Row)`
         padding: 10px 120px;
         background-color: rgb(26, 148, 255); 
