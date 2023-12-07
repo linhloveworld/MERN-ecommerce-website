@@ -1,30 +1,57 @@
-import React from 'react'
-import { WrapperContainerLeft,WrapperContainerRight } from './style'
+import React, { useState } from 'react'
+import { WrapperContainerLeft,WrapperContainerRight, WrapperTextLight } from './style'
 import InputFormComponent from '../../components/InputFormComponent/InputFormComponent'
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
-import { Image } from 'antd'
+import { Divider, Image } from 'antd'
 import imageLogo from '../../assets/images/logo-login.png'
+import { EyeFilled, EyeInvisibleFilled } from '@ant-design/icons'
+
 const SignInPage = () => {
+  const {IsShowPassword, SetIsShowPassword} = useState(false)
   return (
     <div style={{display:'flex', alignItems:'center',justifyContent:'center',background:'rgb(0,0,0,0.53)', height:'100vh'}}>
       <div style={{width:'800px',height:'445px',borderRadius:'6px',background:'#ffff',display:'flex'}}>
         <WrapperContainerLeft>
           <h1>Xin chao</h1>
           <p>Dang nhap va tao tai khoan</p>
-        <InputFormComponent/>
+        <InputFormComponent style={{marginBottom:'10px'}} placeholder="abc@mail.com"/>
+        <Divider/>
+        <div style={{position:'relative'}}>
+          <span 
+          style={{
+            zIndex:10,
+            position:'absolute',
+            top:'4px',
+            right:'8px'
+          }}>{
+            IsShowPassword ? (
+              <EyeFilled/>
+            ) : (
+              <EyeInvisibleFilled/>
+            )
+          }</span>
+          <InputFormComponent placeholder="your password" type={IsShowPassword ? "text" : "password"}/>
+        </div>
         <ButtonComponent
               bordered={false}
               size={20}
               styleButton={{
                 background:'rgb(255,57,69)',
                 height:'48px',
-                width:'220px',
+                width:'100%',
                 border:'none',
-                borderRadius: '4px'
+                borderRadius: '4px',
+                margin: '26px 0 10px'
               }}
               textButton={'Dang nhap'}
               styleTextButton={{color:'#ffff', fontSize:'15px',fontWeight:'700'}}
             />
+            <p><WrapperTextLight>ABCXYZ</WrapperTextLight></p>
+            <p>Chua co tai khoan?
+              <WrapperTextLight>
+                <span>Tao tai khoan</span>
+              </WrapperTextLight> 
+            </p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
           <div>

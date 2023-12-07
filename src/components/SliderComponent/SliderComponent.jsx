@@ -13,13 +13,13 @@ const SliderComponent = ({arrImages}) => {
     autoplay: true
   };
   return (
-    <Slider {...settings}>
+    <WrapperSliderStyle {...settings}>
       {arrImages.map((images)=>{
         return (
           <Image src={images} alt="slider" preview={false}width="100%" height="274px"/> 
         )
       })}
-    </Slider>
+    </WrapperSliderStyle>
   )
 }
 

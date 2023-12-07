@@ -10,7 +10,8 @@ border-radius: 10px;
 border-bottom: 1px solid red;
 height: 44px;`
 export const WrapperHeader = styled(Row)`
-        padding: 10px 120px;
+        width: 1270px;
+        padding: 10px 0;
         background-color: rgb(26, 148, 255); 
         align-item: center;
         flex-wrap: nowrap`
